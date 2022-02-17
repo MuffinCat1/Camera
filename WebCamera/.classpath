@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/bridj-0.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/dtd-xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jaco-mp3-player-0.9.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jflac-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jl1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jl-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jnlp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/jsch-0.1.54.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/mp3plugin-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/mp3spi1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/nativeskin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/nativeskinlib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/ostermillerutils_1_03_00.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/vorbisspi1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Win11/Desktop/Project/Java Projecs/WebCamera/src/main/java/Librarys/xml-apis.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
