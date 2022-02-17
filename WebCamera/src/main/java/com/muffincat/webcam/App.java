@@ -34,8 +34,13 @@ import javazoom.jl.player.Player;
 
 
 public class App extends JFrame implements Callable<Boolean>{
-	
+
 	private static final long serialVersionUID = -75997589526020136L;
+	
+	static Dimension UHD = new Dimension(3840, 2160);
+	static Dimension SUHD = new Dimension(7680, 4320);
+	static Dimension SUHD_16K = new Dimension(15360, 4320);
+	
 	static JFrame frame = null;
 	static Webcam webcam = null;
 	
@@ -115,11 +120,14 @@ public class App extends JFrame implements Callable<Boolean>{
 			webcam.setViewSize(WebcamResolution.HD.getSize());
 		} else {
 			switch(pictureMode) {
-				case "hd": case "HD": webcam.setViewSize(WebcamResolution.HD.getSize()); break;
-				case "hdp": case "HDP": webcam.setViewSize(WebcamResolution.HDP.getSize()); break;
-				case "qhd": case "QHD": webcam.setViewSize(WebcamResolution.QHD.getSize()); break;
-				case "fhd": case "FHD": webcam.setViewSize(WebcamResolution.FHD.getSize()); break;
-				case "fhdp": case "FHDP": webcam.setViewSize(WebcamResolution.FHDP.getSize()); break;
+				case "hd": case "HD": webcam.setViewSize(WebcamResolution.HD.getSize()); break; //hd
+				case "hdp": case "HDP": webcam.setViewSize(WebcamResolution.HDP.getSize()); break; //hd plus
+				case "qhd": case "QHD": webcam.setViewSize(WebcamResolution.QHD.getSize()); break; //quad hd
+				case "fhd": case "FHD": webcam.setViewSize(WebcamResolution.FHD.getSize()); break; //full hd
+				case "fhdp": case "FHDP": webcam.setViewSize(WebcamResolution.FHDP.getSize()); break; //full hd plus
+				case "uhd": case "UHD": webcam.setViewSize(UHD); break; //ultra hd 
+				case "suhd": case "SUHD": webcam.setViewSize(SUHD); break; //super ultra hd (4k)
+				case "suhd 16k": case "SUHD 16K": webcam.setViewSize(SUHD_16K); break; //super ultra hd (16k)
 				default: {
 					JOptionPane.showMessageDialog(null, String.format("the resolution mode \"%s\" is not valid please write a valid mode", pictureMode)); 
 					System.exit(0);
@@ -140,7 +148,10 @@ public class App extends JFrame implements Callable<Boolean>{
 				WebcamResolution.HDP.getSize(),
 				WebcamResolution.QHD.getSize(),
 				WebcamResolution.FHD.getSize(),
-				WebcamResolution.FHDP.getSize()
+				WebcamResolution.FHDP.getSize(),
+				UHD,
+				SUHD,
+				SUHD_16K
 		};
 
 		if(Webcam.getDefault() == null) {
@@ -159,10 +170,10 @@ public class App extends JFrame implements Callable<Boolean>{
 			}
 		}
 		
-		File file3 = new File(String.format("%s\\Pictures", home));
+		File file2 = new File(String.format("%s\\Pictures", home));
 		
-		if (!file3.exists()) {
-			if(file3.mkdir()) {
+		if (!file2.exists()) {
+			if(file2.mkdir()) {
 				JOptionPane.showMessageDialog(null, "The Pictures Folder in Desktop was created succsefully"); 
 			} else {
 				JOptionPane.showMessageDialog(null, "The Pictures Folder in Desktop wasn't created succsefully, please create the folder manually"); 
@@ -183,7 +194,7 @@ public class App extends JFrame implements Callable<Boolean>{
 		webcam = Webcam.getDefault();
 		webcam.setCustomViewSizes(nonStandardResolutions);
 		
-		String pictureMode = JOptionPane.showInputDialog("what resulotion your picture is? (HD, HDP, QHD, FHD, FHDP) ");
+		String pictureMode = JOptionPane.showInputDialog("what resulotion your picture is? (HD, HDP, QHD, UHD, SUHD, SUHD 16K, FHD, FHDP) ", "For example: HD");
 		
 		resolutionSetup(pictureMode);
 		
